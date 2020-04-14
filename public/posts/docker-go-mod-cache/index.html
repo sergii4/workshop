@@ -22,11 +22,13 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Docker, go modules and private repos"/>
-<meta name="twitter:description" content="Go modules change the way we work with dependency not only locally but in Docker(CI) as well. #more First problem we face is caching dependency. It resolves quite simple as docker layer:
+<meta name="twitter:description" content="Go modules change the way we work with dependency not only locally but in Docker(CI) as well.
+First problem we face is caching dependency. It resolves quite simple as docker layer:
  When building an image, Docker steps through the instructions in your Dockerfile, executing each in the order specified. As each instruction is examined, Docker looks for an existing image in its cache that it can reuse, rather than creating a new (duplicate) image."/>
 
 <meta property="og:title" content="Docker, go modules and private repos" />
-<meta property="og:description" content="Go modules change the way we work with dependency not only locally but in Docker(CI) as well. #more First problem we face is caching dependency. It resolves quite simple as docker layer:
+<meta property="og:description" content="Go modules change the way we work with dependency not only locally but in Docker(CI) as well.
+First problem we face is caching dependency. It resolves quite simple as docker layer:
  When building an image, Docker steps through the instructions in your Dockerfile, executing each in the order specified. As each instruction is examined, Docker looks for an existing image in its cache that it can reuse, rather than creating a new (duplicate) image." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://getman.io/posts/docker-go-mod-cache/" />
@@ -195,9 +197,8 @@
   
   <div class="post">
     <p><img src="/img/go-mod.png" alt="go modules img">
-Go modules change the way we work with dependency not only locally but in Docker(CI) as well.
-#more
-First problem we face is caching dependency. It resolves quite simple as docker layer:</p>
+Go modules change the way we work with dependency not only locally but in Docker(CI) as well.</p>
+<p>First problem we face is caching dependency. It resolves quite simple as docker layer:</p>
 <blockquote>
 <p>When building an image, Docker steps through the instructions in your Dockerfile, executing each in the order specified. As each instruction is examined, Docker looks for an existing image in its cache that it can reuse, rather than creating a new (duplicate) image.</p>
 </blockquote>
@@ -247,6 +248,20 @@ RUN go mod download
         </div>
         
     
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-163649901-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
 
 <script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js" integrity="sha384-b3ua1l97aVGAPEIe48b4TC60WUQbQaGi2jqAWM90y0OZXZeyaTCWtBTKtjW2GXG1" crossorigin="anonymous"></script>
 

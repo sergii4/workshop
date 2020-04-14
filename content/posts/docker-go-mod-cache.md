@@ -2,7 +2,7 @@
 title: "Docker, go modules and private repos"
 date: 2020-03-29T20:14:27+03:00
 tags: ["docker", "go", "git"]
-draft: true
+draft: false
 ---
 ![go modules img](/img/go-mod.png)
 Go modules change the way we work with dependency not only locally but in Docker(CI) as well.

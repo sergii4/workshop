@@ -17,7 +17,8 @@
       <pubDate>Sun, 29 Mar 2020 20:14:27 +0300</pubDate>
       
       <guid>https://getman.io/posts/docker-go-mod-cache/</guid>
-      <description>Go modules change the way we work with dependency not only locally but in Docker(CI) as well. #more First problem we face is caching dependency. It resolves quite simple as docker layer:
+      <description>Go modules change the way we work with dependency not only locally but in Docker(CI) as well.
+First problem we face is caching dependency. It resolves quite simple as docker layer:
  When building an image, Docker steps through the instructions in your Dockerfile, executing each in the order specified. As each instruction is examined, Docker looks for an existing image in its cache that it can reuse, rather than creating a new (duplicate) image.</description>
     </item>
     
