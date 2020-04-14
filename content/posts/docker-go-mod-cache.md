@@ -6,7 +6,7 @@ draft: true
 ---
 ![go modules img](/img/go-mod.png)
 Go modules change the way we work with dependency not only locally but in Docker(CI) as well.
-#more
+
 First problem we face is caching dependency. It resolves quite simple as docker layer:
 > When building an image, Docker steps through the instructions in your Dockerfile, executing each in the order specified. As each instruction is examined, Docker looks for an existing image in its cache that it can reuse, rather than creating a new (duplicate) image.
 
