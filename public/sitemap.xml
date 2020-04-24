@@ -3,6 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://getman.io/tags/go/</loc>
+    <lastmod>2020-04-23T20:05:22+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getman.io/posts/manipulate-unicode-in-go/</loc>
+    <lastmod>2020-04-23T20:05:22+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getman.io/posts/</loc>
+    <lastmod>2020-04-23T20:05:22+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getman.io/</loc>
+    <lastmod>2020-04-23T20:05:22+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getman.io/tags/</loc>
+    <lastmod>2020-04-23T20:05:22+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getman.io/tags/unicode/</loc>
+    <lastmod>2020-04-23T20:05:22+03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://getman.io/tags/docker/</loc>
     <lastmod>2020-03-29T20:14:27+03:00</lastmod>
   </url>
@@ -14,26 +44,6 @@
   
   <url>
     <loc>https://getman.io/tags/git/</loc>
-    <lastmod>2020-03-29T20:14:27+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://getman.io/tags/go/</loc>
-    <lastmod>2020-03-29T20:14:27+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://getman.io/posts/</loc>
-    <lastmod>2020-03-29T20:14:27+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://getman.io/</loc>
-    <lastmod>2020-03-29T20:14:27+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://getman.io/tags/</loc>
     <lastmod>2020-03-29T20:14:27+03:00</lastmod>
   </url>
   
