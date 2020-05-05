@@ -6,17 +6,53 @@
     <description>Recent content in Tags on Sergii Getman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 23 Apr 2020 20:05:22 +0300</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2020 14:13:20 +0300</lastBuildDate>
     
 	<atom:link href="https://getman.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>aws</title>
+      <link>https://getman.io/tags/aws/</link>
+      <pubDate>Tue, 05 May 2020 14:13:20 +0300</pubDate>
+      
+      <guid>https://getman.io/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://getman.io/tags/docker/</link>
+      <pubDate>Tue, 05 May 2020 14:13:20 +0300</pubDate>
+      
+      <guid>https://getman.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>go</title>
       <link>https://getman.io/tags/go/</link>
-      <pubDate>Thu, 23 Apr 2020 20:05:22 +0300</pubDate>
+      <pubDate>Tue, 05 May 2020 14:13:20 +0300</pubDate>
       
       <guid>https://getman.io/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>redis</title>
+      <link>https://getman.io/tags/redis/</link>
+      <pubDate>Tue, 05 May 2020 14:13:20 +0300</pubDate>
+      
+      <guid>https://getman.io/tags/redis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sqs</title>
+      <link>https://getman.io/tags/sqs/</link>
+      <pubDate>Tue, 05 May 2020 14:13:20 +0300</pubDate>
+      
+      <guid>https://getman.io/tags/sqs/</guid>
       <description></description>
     </item>
     
@@ -26,15 +62,6 @@
       <pubDate>Thu, 23 Apr 2020 20:05:22 +0300</pubDate>
       
       <guid>https://getman.io/tags/unicode/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>docker</title>
-      <link>https://getman.io/tags/docker/</link>
-      <pubDate>Sun, 29 Mar 2020 20:14:27 +0300</pubDate>
-      
-      <guid>https://getman.io/tags/docker/</guid>
       <description></description>
     </item>
     
