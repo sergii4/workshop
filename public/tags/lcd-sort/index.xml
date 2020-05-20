@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>unicode on Sergii Getman</title>
-    <link>https://getman.io/tags/unicode/</link>
-    <description>Recent content in unicode on Sergii Getman</description>
+    <title>lcd sort on Sergii Getman</title>
+    <link>https://getman.io/tags/lcd-sort/</link>
+    <description>Recent content in lcd sort on Sergii Getman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 20 May 2020 13:41:25 +0300</lastBuildDate>
     
-	<atom:link href="https://getman.io/tags/unicode/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://getman.io/tags/lcd-sort/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,18 +20,6 @@
       <description>Anagram Problem Solving The problem Given an input file that contains one word per line, as an output construct a list of all anagrams from that input file. Print those words to the console, where all words that are an anagram should each other should be on the same line.
 Consider aspects such as Maintainability, Scalability, Performance, etc
 The steps Read file The only optimization of reading file is reading file line by line to not load the whole into memory.</description>
-    </item>
-    
-    <item>
-      <title>Manipulate Unicode in Go</title>
-      <link>https://getman.io/posts/manipulate-unicode-in-go/</link>
-      <pubDate>Thu, 23 Apr 2020 20:05:22 +0300</pubDate>
-      
-      <guid>https://getman.io/posts/manipulate-unicode-in-go/</guid>
-      <description>We work with string every day. We work we character sets every day. But how much do we know about ASCII, UTF-8, Unicode?
-There is the Caesar cipher method:
- The method in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. The method is named after Julius Caesar, who used it in his private correspondence.
- Assume we have &amp;ldquo;hello worldz&amp;rdquo; and want encode it with shifting by 1.</description>
     </item>
     
   </channel>

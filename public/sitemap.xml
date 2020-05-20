@@ -3,22 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://getman.io/tags/algorithms/</loc>
+    <lastmod>2020-05-20T13:41:25+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getman.io/posts/anagrams/</loc>
+    <lastmod>2020-05-20T13:41:25+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getman.io/tags/go/</loc>
+    <lastmod>2020-05-20T13:41:25+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getman.io/tags/lcd-sort/</loc>
+    <lastmod>2020-05-20T13:41:25+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getman.io/posts/</loc>
+    <lastmod>2020-05-20T13:41:25+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getman.io/</loc>
+    <lastmod>2020-05-20T13:41:25+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getman.io/tags/</loc>
+    <lastmod>2020-05-20T13:41:25+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getman.io/tags/unicode/</loc>
+    <lastmod>2020-05-20T13:41:25+03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://getman.io/tags/aws/</loc>
     <lastmod>2020-05-05T14:13:20+03:00</lastmod>
   </url>
   
   <url>
     <loc>https://getman.io/tags/docker/</loc>
-    <lastmod>2020-05-05T14:13:20+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://getman.io/tags/go/</loc>
-    <lastmod>2020-05-05T14:13:20+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://getman.io/posts/</loc>
     <lastmod>2020-05-05T14:13:20+03:00</lastmod>
   </url>
   
@@ -33,27 +63,12 @@
   </url>
   
   <url>
-    <loc>https://getman.io/</loc>
-    <lastmod>2020-05-05T14:13:20+03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://getman.io/tags/sqs/</loc>
     <lastmod>2020-05-05T14:13:20+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://getman.io/tags/</loc>
-    <lastmod>2020-05-05T14:13:20+03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://getman.io/posts/manipulate-unicode-in-go/</loc>
-    <lastmod>2020-04-23T20:05:22+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://getman.io/tags/unicode/</loc>
     <lastmod>2020-04-23T20:05:22+03:00</lastmod>
   </url>
   

@@ -6,13 +6,24 @@
     <description>Recent content in go on Sergii Getman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 05 May 2020 14:13:20 +0300</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2020 13:41:25 +0300</lastBuildDate>
     
 	<atom:link href="https://getman.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Redis delayed task with go</title>
+      <title>Anagrams</title>
+      <link>https://getman.io/posts/anagrams/</link>
+      <pubDate>Wed, 20 May 2020 13:41:25 +0300</pubDate>
+      
+      <guid>https://getman.io/posts/anagrams/</guid>
+      <description>Anagram Problem Solving The problem Given an input file that contains one word per line, as an output construct a list of all anagrams from that input file. Print those words to the console, where all words that are an anagram should each other should be on the same line.
+Consider aspects such as Maintainability, Scalability, Performance, etc
+The steps Read file The only optimization of reading file is reading file line by line to not load the whole into memory.</description>
+    </item>
+    
+    <item>
+      <title>Redis delayed tasks with go</title>
       <link>https://getman.io/posts/redis-delayed-task/</link>
       <pubDate>Tue, 05 May 2020 14:13:20 +0300</pubDate>
       
