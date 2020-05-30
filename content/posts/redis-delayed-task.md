@@ -3,6 +3,7 @@ title: "Redis delayed tasks with go"
 date: 2020-05-05T14:13:20+03:00
 description: "Redis delayed tasks with go"
 tags: ["go", "redis", "aws", "sqs", "docker"]
+keywords: ["go", "redis", "aws", "sqs", "docker"]
 draft: false
 ---
 # Use Redis as a queue of delayed task

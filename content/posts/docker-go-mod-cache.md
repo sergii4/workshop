@@ -2,6 +2,7 @@
 title: "Docker, go modules and private repos"
 date: 2020-03-29T20:14:27+03:00
 tags: ["docker", "go", "git"]
+keywords: ["docker", "go", "git"]
 description: "Docker, go modules and private repos"
 draft: false
 ---

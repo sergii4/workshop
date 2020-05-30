@@ -1,6 +1,7 @@
 ---
 title: "Manipulate Unicode in Go"
 tags: ["go", "unicode"]
+keywords: ["go", "unicode"]
 description: "Manipulate Unicode in Go"
 date: 2020-04-23T20:05:22+03:00
 draft: false

@@ -1,11 +1,11 @@
 ---
-title: "Anagrams"
+title: "Anagram Problem Solving"
 date: 2020-05-20T13:41:25+03:00
 tags: ["algorithms", "go", "unicode", "lcd sort"]
+keywords: ["algorithms", "go", "unicode", "lcd sort"]
 description: "Anagram Problem Solving"
 draft: false
 ---
-# Anagram Problem Solving 
 
 ## The problem
 
