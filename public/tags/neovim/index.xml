@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>neovim on Sergii Getman</title>
+    <link>https://getman.io/tags/neovim/</link>
+    <description>Recent content in neovim on Sergii Getman</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 13 Mar 2021 20:24:51 +0000</lastBuildDate><atom:link href="https://getman.io/tags/neovim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gopls</title>
+      <link>https://getman.io/posts/gopls/</link>
+      <pubDate>Sat, 13 Mar 2021 20:24:51 +0000</pubDate>
+      
+      <guid>https://getman.io/posts/gopls/</guid>
+      <description>Gopls Intro Mid of 2018, I decided to switch from Java to Go. Language change leads to change editor and whole ecosystem and workflow such as doing my job primarily from the terminal.
+At the very beginning of my Go journey, I tried Vim as an editor(with vim-go), but I gave up because of a double burden such as learning a new language and a new editor at the same time.</description>
+    </item>
+    
+  </channel>
+</rss>

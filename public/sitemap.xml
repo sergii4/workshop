@@ -1,90 +1,74 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>https://getman.io/tags/algorithms/</loc>
-    <lastmod>2020-05-20T13:41:25+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://getman.io/posts/anagrams/</loc>
-    <lastmod>2020-05-20T13:41:25+03:00</lastmod>
-  </url>
-  
   <url>
     <loc>https://getman.io/tags/go/</loc>
+    <lastmod>2021-03-13T20:24:51+00:00</lastmod>
+  </url><url>
+    <loc>https://getman.io/posts/gopls/</loc>
+    <lastmod>2021-03-13T20:24:51+00:00</lastmod>
+  </url><url>
+    <loc>https://getman.io/tags/gopls/</loc>
+    <lastmod>2021-03-13T20:24:51+00:00</lastmod>
+  </url><url>
+    <loc>https://getman.io/tags/lsp/</loc>
+    <lastmod>2021-03-13T20:24:51+00:00</lastmod>
+  </url><url>
+    <loc>https://getman.io/tags/neovim/</loc>
+    <lastmod>2021-03-13T20:24:51+00:00</lastmod>
+  </url><url>
+    <loc>https://getman.io/posts/</loc>
+    <lastmod>2021-03-13T20:24:51+00:00</lastmod>
+  </url><url>
+    <loc>https://getman.io/</loc>
+    <lastmod>2021-03-13T20:24:51+00:00</lastmod>
+  </url><url>
+    <loc>https://getman.io/tags/</loc>
+    <lastmod>2021-03-13T20:24:51+00:00</lastmod>
+  </url><url>
+    <loc>https://getman.io/tags/vim/</loc>
+    <lastmod>2021-03-13T20:24:51+00:00</lastmod>
+  </url><url>
+    <loc>https://getman.io/tags/vscode/</loc>
+    <lastmod>2021-03-13T20:24:51+00:00</lastmod>
+  </url><url>
+    <loc>https://getman.io/tags/algorithms/</loc>
     <lastmod>2020-05-20T13:41:25+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://getman.io/posts/anagrams/</loc>
+    <lastmod>2020-05-20T13:41:25+03:00</lastmod>
+  </url><url>
     <loc>https://getman.io/tags/lcd-sort/</loc>
     <lastmod>2020-05-20T13:41:25+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://getman.io/posts/</loc>
-    <lastmod>2020-05-20T13:41:25+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://getman.io/</loc>
-    <lastmod>2020-05-20T13:41:25+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://getman.io/tags/</loc>
-    <lastmod>2020-05-20T13:41:25+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://getman.io/tags/unicode/</loc>
     <lastmod>2020-05-20T13:41:25+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://getman.io/tags/aws/</loc>
     <lastmod>2020-05-05T14:13:20+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://getman.io/tags/docker/</loc>
     <lastmod>2020-05-05T14:13:20+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://getman.io/tags/redis/</loc>
     <lastmod>2020-05-05T14:13:20+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://getman.io/posts/redis-delayed-task/</loc>
     <lastmod>2020-05-05T14:13:20+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://getman.io/tags/sqs/</loc>
     <lastmod>2020-05-05T14:13:20+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://getman.io/posts/manipulate-unicode-in-go/</loc>
     <lastmod>2020-04-23T20:05:22+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://getman.io/posts/docker-go-mod-cache/</loc>
     <lastmod>2020-03-29T20:14:27+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://getman.io/tags/git/</loc>
     <lastmod>2020-03-29T20:14:27+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://getman.io/about/</loc>
     <priority>0</priority>
   </url>
-  
 </urlset>
