@@ -1,3 +1,4 @@
 Hi!
 
-My name is Sergii Getman. I am backend developer focused on Gloang with Java background. 
+My name is Sergii Getman. A backend developer. A vim editor fan. 
+#go #containers #unix #cloud #lsp #vim

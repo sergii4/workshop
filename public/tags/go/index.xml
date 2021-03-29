@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>go on Sergii Getman</title>
+    <title>go on Terminal, command line, code</title>
     <link>https://getman.io/tags/go/</link>
-    <description>Recent content in go on Sergii Getman</description>
+    <description>Recent content in go on Terminal, command line, code</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>en-us</language>
     <lastBuildDate>Sat, 13 Mar 2021 20:24:51 +0000</lastBuildDate><atom:link href="https://getman.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gopls</title>
@@ -19,10 +19,10 @@ At the very beginning of my Go journey, I tried Vim as an editor(with vim-go), b
     
     <item>
       <title>Anagram Problem Solving</title>
-      <link>https://getman.io/posts/anagrams/</link>
+      <link>https://getman.io/posts/anagram-problem-solving/</link>
       <pubDate>Wed, 20 May 2020 13:41:25 +0300</pubDate>
       
-      <guid>https://getman.io/posts/anagrams/</guid>
+      <guid>https://getman.io/posts/anagram-problem-solving/</guid>
       <description>The problem Given an input file that contains one word per line, as an output construct a list of all anagrams from that input file. Print those words to the console, where all words that are an anagram should each other should be on the same line.
 Consider aspects such as Maintainability, Scalability, Performance, etc
 The steps Read file The only optimization of reading file is reading file line by line to not load the whole into memory.</description>
@@ -30,10 +30,10 @@ The steps Read file The only optimization of reading file is reading file line b
     
     <item>
       <title>Redis delayed tasks with go</title>
-      <link>https://getman.io/posts/redis-delayed-task/</link>
+      <link>https://getman.io/posts/redis-delayed-tasks-with-go/</link>
       <pubDate>Tue, 05 May 2020 14:13:20 +0300</pubDate>
       
-      <guid>https://getman.io/posts/redis-delayed-task/</guid>
+      <guid>https://getman.io/posts/redis-delayed-tasks-with-go/</guid>
       <description>Use Redis as a queue of delayed task If you work on a distributed system it is a high probability that you need some container, queue for sharing info/tasks between components of your system, or even instances of the same component. Let&amp;rsquo;s assume that you need not only queueing but delaying as well.
 Probably the first that comes to your mind is Amazon Simple Queue Service (SQS). SQS eliminates the complexity and overhead associated with managing and operating message oriented middleware, and empowers developers to focus on differentiating work.</description>
     </item>
@@ -52,10 +52,10 @@ There is the Caesar cipher method:
     
     <item>
       <title>Docker, go modules and private repos</title>
-      <link>https://getman.io/posts/docker-go-mod-cache/</link>
+      <link>https://getman.io/posts/docker-go-modules-and-private-repos/</link>
       <pubDate>Sun, 29 Mar 2020 20:14:27 +0300</pubDate>
       
-      <guid>https://getman.io/posts/docker-go-mod-cache/</guid>
+      <guid>https://getman.io/posts/docker-go-modules-and-private-repos/</guid>
       <description>Go modules change the way we work with dependency not only locally but in Docker(CI) as well.
 First problem we face is caching dependency. It resolves quite simple as docker layer:
  When building an image, Docker steps through the instructions in your Dockerfile, executing each in the order specified. As each instruction is examined, Docker looks for an existing image in its cache that it can reuse, rather than creating a new (duplicate) image.</description>

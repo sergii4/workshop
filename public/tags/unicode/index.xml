@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>unicode on Sergii Getman</title>
+    <title>unicode on Terminal, command line, code</title>
     <link>https://getman.io/tags/unicode/</link>
-    <description>Recent content in unicode on Sergii Getman</description>
+    <description>Recent content in unicode on Terminal, command line, code</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>en-us</language>
     <lastBuildDate>Wed, 20 May 2020 13:41:25 +0300</lastBuildDate><atom:link href="https://getman.io/tags/unicode/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Anagram Problem Solving</title>
-      <link>https://getman.io/posts/anagrams/</link>
+      <link>https://getman.io/posts/anagram-problem-solving/</link>
       <pubDate>Wed, 20 May 2020 13:41:25 +0300</pubDate>
       
-      <guid>https://getman.io/posts/anagrams/</guid>
+      <guid>https://getman.io/posts/anagram-problem-solving/</guid>
       <description>The problem Given an input file that contains one word per line, as an output construct a list of all anagrams from that input file. Print those words to the console, where all words that are an anagram should each other should be on the same line.
 Consider aspects such as Maintainability, Scalability, Performance, etc
 The steps Read file The only optimization of reading file is reading file line by line to not load the whole into memory.</description>

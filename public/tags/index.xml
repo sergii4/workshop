@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Sergii Getman</title>
+    <title>Tags on Terminal, command line, code</title>
     <link>https://getman.io/tags/</link>
-    <description>Recent content in Tags on Sergii Getman</description>
+    <description>Recent content in Tags on Terminal, command line, code</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>en-us</language>
     <lastBuildDate>Sat, 13 Mar 2021 20:24:51 +0000</lastBuildDate><atom:link href="https://getman.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>go</title>

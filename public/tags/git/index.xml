@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>git on Sergii Getman</title>
+    <title>git on Terminal, command line, code</title>
     <link>https://getman.io/tags/git/</link>
-    <description>Recent content in git on Sergii Getman</description>
+    <description>Recent content in git on Terminal, command line, code</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>en-us</language>
     <lastBuildDate>Sun, 29 Mar 2020 20:14:27 +0300</lastBuildDate><atom:link href="https://getman.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker, go modules and private repos</title>
-      <link>https://getman.io/posts/docker-go-mod-cache/</link>
+      <link>https://getman.io/posts/docker-go-modules-and-private-repos/</link>
       <pubDate>Sun, 29 Mar 2020 20:14:27 +0300</pubDate>
       
-      <guid>https://getman.io/posts/docker-go-mod-cache/</guid>
+      <guid>https://getman.io/posts/docker-go-modules-and-private-repos/</guid>
       <description>Go modules change the way we work with dependency not only locally but in Docker(CI) as well.
 First problem we face is caching dependency. It resolves quite simple as docker layer:
  When building an image, Docker steps through the instructions in your Dockerfile, executing each in the order specified. As each instruction is examined, Docker looks for an existing image in its cache that it can reuse, rather than creating a new (duplicate) image.</description>

@@ -1,219 +1,246 @@
 <!DOCTYPE html>
-<html lang="en">
-    
-    
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Gopls | Terminal, command line, code</title>
+  <meta name="description" content="Vim zsh go docker algorithms k8s. Coffee aeropress V60. Dog dachshund">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="Gopls" />
+<meta property="og:description" content="Gopls" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://getman.io/posts/gopls/" /><meta property="og:image" content="https://media.giphy.com/media/HVbyRe2CnqzRPxUfVy/giphy.gif" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-03-13T20:24:51&#43;00:00" />
+<meta property="article:modified_time" content="2021-03-13T20:24:51&#43;00:00" />
 
 
-    <head>
-    <link href="https://gmpg.org/xfn/11" rel="profile">
-    <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta http-equiv="Cache-Control" content="public" />
-<!-- Enable responsiveness on mobile devices -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.81.0" />
-
-    
-    
-    
-
-<title>Gopls • Sergii Getman</title>
-
-<meta name="keywords" content="go gopls lsp vim neovim vscode">
-<meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://media.giphy.com/media/HVbyRe2CnqzRPxUfVy/giphy.gif"/>
 
 <meta name="twitter:title" content="Gopls"/>
 <meta name="twitter:description" content="Gopls"/>
 
-<meta property="og:title" content="Gopls" />
-<meta property="og:description" content="Gopls" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://getman.io/posts/gopls/" /><meta property="og:image" content="https://media.giphy.com/media/HVbyRe2CnqzRPxUfVy/giphy.gif" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-03-13T20:24:51&#43;00:00" />
-<meta property="article:modified_time" content="2021-03-13T20:24:51&#43;00:00" /><meta property="og:site_name" content="Programs, containers and tools" />
-
-
-
-    
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-
-
-
-
-
-
-
-
-<link rel="stylesheet" href="/scss/hyde-hyde.71157e768c4e111a23c3531b95e0cbb59bbef3c9e6901d36247cb53d6b6be258.css" integrity="sha256-cRV&#43;doxOERojw1MbleDLtZu&#43;88nmkB02JHy1PWtr4lg=">
-
-
-<link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
-
-
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  
+  
+  
+  <link rel="stylesheet" href="https://getman.io/css/style-white.css">
+  
+  
+  
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <!-- Icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-    <link rel="shortcut icon" href="/favicon.png">
-    
-    
+  
 
+  
+<link rel="icon" type="image/png" href="https://getman.io/favicon.ico" />
+
+  
+  
+  
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-163649901-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+  
+  
+  
+  <meta name="keywords" content="go gopls lsp vim neovim vscode">
 </head>
 
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
 
-    <body class=" ">
-    
-<div class="sidebar">
-  <div class="container ">
-    <div class="sidebar-about">
-      <span class="site__title">
-        <a href="https://getman.io/">
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">All posts</a></li>
+         
+        <li><a href="/tags">Tags</a></li>
+         
+        <li><a href="/about">About</a></li>
         
-          Sergii Getman
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
         
-        </a>
-      </span>
+        <li>
+          <a class="icon" href=" https://getman.io/posts/anagram-problem-solving/">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
       
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fgetman.io%2fposts%2fgopls%2f">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fgetman.io%2fposts%2fgopls%2f&text=Gopls">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fgetman.io%2fposts%2fgopls%2f&title=Gopls">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fgetman.io%2fposts%2fgopls%2f&is_video=false&description=Gopls">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Gopls&body=Check out this article: https%3a%2f%2fgetman.io%2fposts%2fgopls%2f">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fgetman.io%2fposts%2fgopls%2f&title=Gopls">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fgetman.io%2fposts%2fgopls%2f&title=Gopls">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fgetman.io%2fposts%2fgopls%2f&title=Gopls">
+      <i class="fab fa-stumbleupon " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://digg.com/submit?url=https%3a%2f%2fgetman.io%2fposts%2fgopls%2f&title=Gopls">
+      <i class="fab fa-digg " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fgetman.io%2fposts%2fgopls%2f&name=Gopls&description=Gopls">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fgetman.io%2fposts%2fgopls%2f&t=Gopls">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#intro">Intro</a></li>
+    <li><a href="#what-is-gopls">What is Gopls</a></li>
+    <li><a href="#what-problems-does-it-solve">What problems does it solve</a></li>
+    <li><a href="#how-does-it-work-and-what-features-does-it-have">How does it work and what features does it have</a>
+      <ul>
+        <li><a href="#implementation">Implementation</a></li>
+        <li><a href="#debug-gopls">Debug gopls</a></li>
+        <li><a href="#open-editor-with-go-project">Open editor with Go project</a></li>
+        <li><a href="#open-document-definition-completion-hover-and-code-actions">Open document, definition, completion, hover and code actions</a></li>
+      </ul>
+    </li>
+    <li><a href="#does-it-work-well">Does it work well</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+    </div>
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        Gopls
+      </h1>
+      <div class="meta">
         
-        
-        
-        <div class="author-image">
-          <img src="https://getman.io/img/me2.jpg" alt="Author Image" class="img--circle img--headshot element--center">
+        <div class="postdate">
+          
+          <time datetime="2021-03-13 20:24:51 &#43;0000 UTC" itemprop="datePublished">2021-03-13</time>
+          
         </div>
         
-      
-      
-      <p class="site__description">
         
-      </p>
-    </div>
-    <div class="collapsible-menu">
-      <input type="checkbox" id="menuToggle">
-      <label for="menuToggle">Sergii Getman</label>
-      <div class="menu-content">
-        <div>
-	<ul class="sidebar-nav">
-		 
-		 
-			 
-				<li>
-					<a href="/posts/">
-						<span>Posts</span>
-					</a>
-				</li>
-			 
-		 
-			 
-				<li>
-					<a href="/about/">
-						<span>About</span>
-					</a>
-				</li>
-			 
-		
-	</ul>
-</div>
-
-        <section class="social">
-	
-	
-	
-	
-	<a href="https://github.com/sergii4" rel="me"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
-	
-	
-	
-	
-	
-	
-	
-	<a href="https://linkedin.com/in/sergei-getman-52a05117" rel="me"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
-	
-	
-	
-	<a href="https://stackoverflow.com/users/2219213/sergii-getman" rel="me"><i class="fab fa-stack-overflow fa-lg" aria-hidden="true"></i></a>
-	
-	
-	
-	
-	
-	
-	
-	
-	<a href="mailto:getman.sergei@gmail.com" rel="me"><i class="fas fa-at fa-lg" aria-hidden="true"></i></a>
-	
-	
-	
-	
-</section>
-
-      </div>
-    </div>
-    
-
-
-  </div>
-</div>
-
-        <div class="content container">
+        <div class="article-tag">
+            <i class="fas fa-tag"></i>
             
-    
-<article>
-  <header>
-    <h1>Gopls</h1>
-    
-    
-<div class="post__meta">
-    
-    
-      <i class="fas fa-calendar-alt"></i> Mar 13, 2021
-    
-    
-    
-    
-    
-      
-      
-          <br/>
-           <i class="fas fa-tags"></i>
-          
-          <a class="badge badge-tag" href="/tags/go">go</a>
-           
-      
-          <a class="badge badge-tag" href="/tags/gopls">gopls</a>
-           
-      
-          <a class="badge badge-tag" href="/tags/lsp">lsp</a>
-           
-      
-          <a class="badge badge-tag" href="/tags/vim">vim</a>
-           
-      
-          <a class="badge badge-tag" href="/tags/neovim">neovim</a>
-           
-      
-          <a class="badge badge-tag" href="/tags/vscode">vscode</a>
-          
-      
-    
-    
-    <br/>
-    <i class="fas fa-clock"></i> 9 min read
-</div>
+            
+            <a class="tag-link" href="/tags/go" rel="tag">go</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/gopls" rel="tag">gopls</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/lsp" rel="tag">lsp</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/vim" rel="tag">vim</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/neovim" rel="tag">neovim</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/vscode" rel="tag">vscode</a>
+            
+        </div>
+        
+      </div>
+    </header>
 
-
-  </header>
   
-  
-  <div class="post">
-    <h1 id="gopls">Gopls</h1>
+    <div class="content" itemprop="articleBody">
+      <h1 id="gopls">Gopls</h1>
 <h2 id="intro">Intro</h2>
 <p>Mid of 2018, I decided to switch from Java to Go. Language change leads to change editor and whole ecosystem and workflow such as doing my job primarily from the terminal.</p>
 <p>At the very beginning of my Go journey, I tried Vim as an editor(with <a href="https://github.com/fatih/vim-go">vim-go</a>), but I gave up because of a double burden such as learning a new language and a new editor at the same time. I switched back to a product well-known in the Java world company - <a href="https://www.jetbrains.com">JetBrains</a> - which makes tools for software developers. Their IDE, <a href="https://www.jetbrains.com/go/">GoLand</a> provides effortless immersion in the Go world.</p>
@@ -253,7 +280,7 @@ At the base is the <em>Cache</em>. This is the level at which we hold informatio
 <p>The top layer is called the <em>View</em>. This holds the configuration, and the mapping to configured packages.</p>
 <p>The purpose of this layering is to allow a single editor session to have multiple views active whilst still sharing as much information as possible for efficiency. In theory if only the View layer existed, the results would be identical, but slower and using more memory.</p>
 <p>It is well illustrated in <a href="https://github.com/golang/tools/blob/master/internal/lsp/cache/session.go">tools/session.go</a></p>
-<pre><code>type Session struct {
+<div class="highlight"><pre style="color:#ccc;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">type Session struct {
 
 	cache *Cache
 
@@ -274,20 +301,20 @@ At the base is the <em>Cache</em>. This is the level at which we hold informatio
 
 	gocmdRunner *gocommand.Runner
 }
-</code></pre><h3 id="debug-gopls">Debug gopls</h3>
+</code></pre></div><h3 id="debug-gopls">Debug gopls</h3>
 <p>To get more information on how <code>gopls</code> works we need to make proper settings.</p>
 <p>For Neovim(<a href="https://github.com/neovim/nvim-lspconfig">neovim/nvim-lspconfig</a> plugin) in <code>init.vim</code>:</p>
-<pre><code>local lspconfig = require'lspconfig'
+<div class="highlight"><pre style="color:#ccc;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">local lspconfig = require&#39;lspconfig&#39;
 lspconfig.gopls.setup{
-	cmd = {'gopls', '-logfile=/tmp/gopls.log', '-rpc.trace'},
+	cmd = {&#39;gopls&#39;, &#39;-logfile=/tmp/gopls.log&#39;, &#39;-rpc.trace&#39;},
 }
-</code></pre><p>For VS Code in <a href="https://code.visualstudio.com/docs/languages/go">Go plugin</a> settings in <code>setting.json</code></p>
-<pre><code>{
-    &quot;go.languageServerFlags&quot;: [
-        &quot;-logfile=/tmp/vs-gopls.log&quot;, &quot;-rpc.trace&quot;
+</code></pre></div><p>For VS Code in <a href="https://code.visualstudio.com/docs/languages/go">Go plugin</a> settings in <code>setting.json</code></p>
+<div class="highlight"><pre style="color:#ccc;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">{
+    &#34;go.languageServerFlags&#34;: [
+        &#34;-logfile=/tmp/vs-gopls.log&#34;, &#34;-rpc.trace&#34;
     ]
 }
-</code></pre><p>Check log in <code>/tmp/gopls.log</code>  and <code>/tmp/vs-gopls.log</code>  respectively</p>
+</code></pre></div><p>Check log in <code>/tmp/gopls.log</code>  and <code>/tmp/vs-gopls.log</code>  respectively</p>
 <h3 id="open-editor-with-go-project">Open editor with Go project</h3>
 <p>When we open editor with open Go project next job should be done:</p>
 <ul>
@@ -297,33 +324,33 @@ lspconfig.gopls.setup{
 <li>works in progress: setting up workspace folder base on (<a href="https://github.com/golang/tools/blob/master/gopls/doc/workspace.md">go.mod/go.sum</a>), loading packages (progress notifications send to an editor</li>
 </ul>
 <p>From</p>
-<pre><code>[Trace - 15:28:21.891 PM] Sending request 'initialize - (1)'.
-</code></pre><p>We see:</p>
+<div class="highlight"><pre style="color:#ccc;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">[Trace - 15:28:21.891 PM] Sending request &#39;initialize - (1)&#39;.
+</code></pre></div><p>We see:</p>
 <p>worksapce folders and root path:</p>
-<pre><code>&quot;workspaceFolders&quot;:[
+<div class="highlight"><pre style="color:#ccc;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">&#34;workspaceFolders&#34;:[
       {
-         &quot;uri&quot;:&quot;file:///Users/sgetman/code/me/workstation/test-go-prj&quot;,
-         &quot;name&quot;:&quot;/Users/sgetman/code/me/workstation/test-go-prj&quot;
+         &#34;uri&#34;:&#34;file:///Users/sgetman/code/me/workstation/test-go-prj&#34;,
+         &#34;name&#34;:&#34;/Users/sgetman/code/me/workstation/test-go-prj&#34;
       }
    ],
-   &quot;rootPath&quot;:&quot;/Users/sgetman/code/me/workstation/test-go-prj&quot;,
-</code></pre><p>clientInfo:</p>
-<pre><code>&quot;clientInfo&quot;:{
-      &quot;version&quot;:&quot;0.5.0&quot;,
-      &quot;name&quot;:&quot;Neovim&quot;
+   &#34;rootPath&#34;:&#34;/Users/sgetman/code/me/workstation/test-go-prj&#34;,
+</code></pre></div><p>clientInfo:</p>
+<div class="highlight"><pre style="color:#ccc;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">&#34;clientInfo&#34;:{
+      &#34;version&#34;:&#34;0.5.0&#34;,
+      &#34;name&#34;:&#34;Neovim&#34;
    },
-</code></pre><p>and</p>
-<pre><code>&quot;clientInfo&quot;:{
-      &quot;name&quot;:&quot;Visual Studio Code&quot;,
-      &quot;version&quot;:&quot;1.52.1&quot;
+</code></pre></div><p>and</p>
+<div class="highlight"><pre style="color:#ccc;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">&#34;clientInfo&#34;:{
+      &#34;name&#34;:&#34;Visual Studio Code&#34;,
+      &#34;version&#34;:&#34;1.52.1&#34;
    },
-</code></pre><p>The we see group of capabilities:</p>
-<pre><code>&quot;capabilities&quot;: {
-    &quot;workspace&quot;: {...},
-    &quot;textDocument&quot;: {...},
-    &quot;window&quot;: {...},
+</code></pre></div><p>The we see group of capabilities:</p>
+<div class="highlight"><pre style="color:#ccc;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">&#34;capabilities&#34;: {
+    &#34;workspace&#34;: {...},
+    &#34;textDocument&#34;: {...},
+    &#34;window&#34;: {...},
 }
-</code></pre><p>We take a look closet at <code>textDocument/definition</code>, <code>textDocument/hover</code> , <code>textDocument/codeActions</code> and <code>textDocument/completion</code>
+</code></pre></div><p>We take a look closet at <code>textDocument/definition</code>, <code>textDocument/hover</code> , <code>textDocument/codeActions</code> and <code>textDocument/completion</code>
 <img src="/img/capabilities.png" alt="capabilities img"></p>
 <h3 id="open-document-definition-completion-hover-and-code-actions">Open document, definition, completion, hover and code actions</h3>
 <p>To understand how <code>gopls</code> works we need to take a look at LSP.
@@ -333,215 +360,215 @@ From the <a href="https://microsoft.github.io/language-server-protocol/overviews
 </blockquote>
 <p><img src="/img/language-server-sequence.png" alt="language server sequence img">
 To play around I use my simple <a href="https://github.com/sergii4/workstation/tree/master/test-go-prj">Go project</a></p>
-<pre><code>  1 package main
-  2
-  3 import (
-  4         &quot;fmt&quot;
-  5 )
-  6
-  7 func plus(a int, b int) int {
-  8         return a + b
-  9 }
- 10
- 11 func plusPlus(a, b, c int) int {
- 12         return a + b + c
- 13 }
- 14
- 15 func main() {
- 16         res := plus(1, 2)
- 17         fmt.Println(&quot;1+2 =&quot;, res)
- 18
- 19         res = plusPlus(1, 2, 3)
- 20         fmt.Println(&quot;1+2+3 =&quot;, res)
- 21 
-</code></pre><p>Neovim
+<div class="highlight"><pre style="color:#ccc;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">  <span style="color:#cd00cd">1</span> <span style="color:#cd00cd">package</span> main
+  <span style="color:#cd00cd">2</span>
+  <span style="color:#cd00cd">3</span> <span style="color:#cd00cd">import</span> (
+  <span style="color:#cd00cd">4</span>         <span style="color:#cd0000">&#34;fmt&#34;</span>
+  <span style="color:#cd00cd">5</span> )
+  <span style="color:#cd00cd">6</span>
+  <span style="color:#cd00cd">7</span> <span style="color:#00cd00">func</span> plus(a <span style="color:#00cd00">int</span>, b <span style="color:#00cd00">int</span>) <span style="color:#00cd00">int</span> {
+  <span style="color:#cd00cd">8</span>         <span style="color:#cdcd00">return</span> a <span style="color:#39c">+</span> b
+  <span style="color:#cd00cd">9</span> }
+ <span style="color:#cd00cd">10</span>
+ <span style="color:#cd00cd">11</span> <span style="color:#00cd00">func</span> plusPlus(a, b, c <span style="color:#00cd00">int</span>) <span style="color:#00cd00">int</span> {
+ <span style="color:#cd00cd">12</span>         <span style="color:#cdcd00">return</span> a <span style="color:#39c">+</span> b <span style="color:#39c">+</span> c
+ <span style="color:#cd00cd">13</span> }
+ <span style="color:#cd00cd">14</span>
+ <span style="color:#cd00cd">15</span> <span style="color:#00cd00">func</span> main() {
+ <span style="color:#cd00cd">16</span>         res <span style="color:#39c">:=</span> plus(<span style="color:#cd00cd">1</span>, <span style="color:#cd00cd">2</span>)
+ <span style="color:#cd00cd">17</span>         fmt.Println(<span style="color:#cd0000">&#34;1+2 =&#34;</span>, res)
+ <span style="color:#cd00cd">18</span>
+ <span style="color:#cd00cd">19</span>         res = plusPlus(<span style="color:#cd00cd">1</span>, <span style="color:#cd00cd">2</span>, <span style="color:#cd00cd">3</span>)
+ <span style="color:#cd00cd">20</span>         fmt.Println(<span style="color:#cd0000">&#34;1+2+3 =&#34;</span>, res)
+ <span style="color:#cd00cd">21</span> 
+</code></pre></div><p>Neovim
 <img src="https://media.giphy.com/media/HVbyRe2CnqzRPxUfVy/giphy.gif" alt="go modules img"></p>
 <p>VSCode
 <img src="https://media.giphy.com/media/sMy9fZGDrr0fCfaJUK/giphy.gif" alt="go modules img"></p>
 <p>I go to string <em>16</em> (in request it is line <em>15</em>, probably numeration starts with 0) and put cursor to the sumbol <code>p</code> of func <code>plus</code>  and invoke <code>go to definition</code>:</p>
-<pre><code>[Trace - 17:33:37.180 PM] Sending request 'textDocument/definition - (2)'.
+<div class="highlight"><pre style="color:#ccc;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">[Trace - 17:33:37.180 PM] Sending request &#39;textDocument/definition - (2)&#39;.
 
 {
-   &quot;textDocument&quot;:{
-      &quot;uri&quot;:&quot;file:///Users/sgetman/code/me/workstation/test-go-prj/main.go&quot;
+   &#34;textDocument&#34;:{
+      &#34;uri&#34;:&#34;file:///Users/sgetman/code/me/workstation/test-go-prj/main.go&#34;
    },
-   &quot;position&quot;:{
-      &quot;character&quot;:8,
-      &quot;line&quot;:15
+   &#34;position&#34;:{
+      &#34;character&#34;:8,
+      &#34;line&#34;:15
    }
 }
 
-[Trace - 17:33:37.181 PM] Received response 'textDocument/definition - (2)' in 0ms.
+[Trace - 17:33:37.181 PM] Received response &#39;textDocument/definition - (2)&#39; in 0ms.
 
 [
    {
-      &quot;uri&quot;:&quot;file:///Users/sgetman/code/me/workstation/test-go-prj/main.go&quot;,
-      &quot;range&quot;:{
-         &quot;start&quot;:{
-            &quot;line&quot;:6,
-            &quot;character&quot;:5
+      &#34;uri&#34;:&#34;file:///Users/sgetman/code/me/workstation/test-go-prj/main.go&#34;,
+      &#34;range&#34;:{
+         &#34;start&#34;:{
+            &#34;line&#34;:6,
+            &#34;character&#34;:5
          },
-         &quot;end&quot;:{
-            &quot;line&quot;:6,
-            &quot;character&quot;:9
+         &#34;end&#34;:{
+            &#34;line&#34;:6,
+            &#34;character&#34;:9
          }
       }
    }
 ]
-</code></pre><p>Go to the line 21 and put cursor after <code>fmt.</code> and invoke autocompletion:</p>
+</code></pre></div><p>Go to the line 21 and put cursor after <code>fmt.</code> and invoke autocompletion:</p>
 <p>Neovim
 <img src="https://media.giphy.com/media/RujN2WV9q2cylgGaxk/giphy.gif" alt="completion nvim img"></p>
 <p>VSCode
 <img src="https://media.giphy.com/media/DzGBD8XgbWRA4c492f/giphy.gif" alt="completion vscode img"></p>
-<pre><code>[Trace - 17:42:22.008 PM] Sending request 'textDocument/completion - (6)'.
+<div class="highlight"><pre style="color:#ccc;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">[Trace - 17:42:22.008 PM] Sending request &#39;textDocument/completion - (6)&#39;.
 
 {
-   &quot;textDocument&quot;:{
-      &quot;uri&quot;:&quot;file:///Users/sgetman/code/me/workstation/test-go-prj/main.go&quot;
+   &#34;textDocument&#34;:{
+      &#34;uri&#34;:&#34;file:///Users/sgetman/code/me/workstation/test-go-prj/main.go&#34;
    },
-   &quot;position&quot;:{
-      &quot;character&quot;:5,
-      &quot;line&quot;:19
+   &#34;position&#34;:{
+      &#34;character&#34;:5,
+      &#34;line&#34;:19
    }
 }
 
-[Trace - 17:42:22.011 PM] Received response 'textDocument/completion - (6)' in 3ms.
+[Trace - 17:42:22.011 PM] Received response &#39;textDocument/completion - (6)&#39; in 3ms.
 
 {
-   &quot;isIncomplete&quot;:true,
-   &quot;items&quot;:[
+   &#34;isIncomplete&#34;:true,
+   &#34;items&#34;:[
       {
-         &quot;label&quot;:&quot;Errorf&quot;,
-         &quot;kind&quot;:3,
-         &quot;detail&quot;:&quot;func(format string, a ...interface{}) error&quot;,
-         &quot;documentation&quot;:&quot;Errorf formats according to a format specifier and returns the string as a\nvalue that satisfies error.\n\nIf the format specifier includes a %w verb with an error operand,\nthe returned error will implement an Unwrap method returning the operand. It is\ninvalid to include more than one %w verb or to supply it with an operand\nthat does not implement the error interface. The %w verb is otherwise\na synonym for %v.\n&quot;,
-         &quot;preselect&quot;:true,
-         &quot;sortText&quot;:&quot;00000&quot;,
-         &quot;filterText&quot;:&quot;Errorf&quot;,
-         &quot;insertTextFormat&quot;:1,
-         &quot;textEdit&quot;:{
-            &quot;range&quot;:{
-               &quot;start&quot;:{
-                  &quot;line&quot;:19,
-                  &quot;character&quot;:5
+         &#34;label&#34;:&#34;Errorf&#34;,
+         &#34;kind&#34;:3,
+         &#34;detail&#34;:&#34;func(format string, a ...interface{}) error&#34;,
+         &#34;documentation&#34;:&#34;Errorf formats according to a format specifier and returns the string as a\nvalue that satisfies error.\n\nIf the format specifier includes a %w verb with an error operand,\nthe returned error will implement an Unwrap method returning the operand. It is\ninvalid to include more than one %w verb or to supply it with an operand\nthat does not implement the error interface. The %w verb is otherwise\na synonym for %v.\n&#34;,
+         &#34;preselect&#34;:true,
+         &#34;sortText&#34;:&#34;00000&#34;,
+         &#34;filterText&#34;:&#34;Errorf&#34;,
+         &#34;insertTextFormat&#34;:1,
+         &#34;textEdit&#34;:{
+            &#34;range&#34;:{
+               &#34;start&#34;:{
+                  &#34;line&#34;:19,
+                  &#34;character&#34;:5
                },
-               &quot;end&quot;:{
-                  &quot;line&quot;:19,
-                  &quot;character&quot;:5
+               &#34;end&#34;:{
+                  &#34;line&#34;:19,
+                  &#34;character&#34;:5
                }
             },
-            &quot;newText&quot;:&quot;Errorf&quot;
+            &#34;newText&#34;:&#34;Errorf&#34;
          }
       },
 ...
       {
-         &quot;label&quot;:&quot;Stringer&quot;,
-         &quot;kind&quot;:8,
-         &quot;detail&quot;:&quot;interface{...}&quot;,
-         &quot;documentation&quot;:&quot;Stringer is implemented by any value that has a String method,\nwhich defines the ``native'' format for that value.\nThe String method is used to print values passed as an operand\nto any format that accepts a string or to an unformatted printer\nsuch as Print.\n&quot;,
-         &quot;sortText&quot;:&quot;00024&quot;,
-         &quot;filterText&quot;:&quot;Stringer&quot;,
-         &quot;insertTextFormat&quot;:1,
-         &quot;textEdit&quot;:{
-            &quot;range&quot;:{
-               &quot;start&quot;:{
-                  &quot;line&quot;:19,
-                  &quot;character&quot;:5
+         &#34;label&#34;:&#34;Stringer&#34;,
+         &#34;kind&#34;:8,
+         &#34;detail&#34;:&#34;interface{...}&#34;,
+         &#34;documentation&#34;:&#34;Stringer is implemented by any value that has a String method,\nwhich defines the ``native&#39;&#39; format for that value.\nThe String method is used to print values passed as an operand\nto any format that accepts a string or to an unformatted printer\nsuch as Print.\n&#34;,
+         &#34;sortText&#34;:&#34;00024&#34;,
+         &#34;filterText&#34;:&#34;Stringer&#34;,
+         &#34;insertTextFormat&#34;:1,
+         &#34;textEdit&#34;:{
+            &#34;range&#34;:{
+               &#34;start&#34;:{
+                  &#34;line&#34;:19,
+                  &#34;character&#34;:5
                },
-               &quot;end&quot;:{
-                  &quot;line&quot;:19,
-                  &quot;character&quot;:5
+               &#34;end&#34;:{
+                  &#34;line&#34;:19,
+                  &#34;character&#34;:5
                }
             },
-            &quot;newText&quot;:&quot;Stringer&quot;
+            &#34;newText&#34;:&#34;Stringer&#34;
          }
       }
    ]
 }
 
-</code></pre><p>Undo autocompletion, put cursor to the <code>P</code>, beginning of  <code>Prinltn</code> and invoke hover:
+</code></pre></div><p>Undo autocompletion, put cursor to the <code>P</code>, beginning of  <code>Prinltn</code> and invoke hover:
 Neovim:
 <img src="/img/hover-nvim.jpg" alt="hover nvim img"></p>
 <p>VSCode:
 <img src="/img/hover-vscode.jpg" alt="hover vscode img"></p>
-<pre><code>[Trace - 18:01:02.759 PM] Sending request 'textDocument/hover - (9)'.
+<div class="highlight"><pre style="color:#ccc;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">[Trace - 18:01:02.759 PM] Sending request &#39;textDocument/hover - (9)&#39;.
 
 {
-   &quot;textDocument&quot;:{
-      &quot;uri&quot;:&quot;file:///Users/sgetman/code/me/workstation/test-go-prj/main.go&quot;
+   &#34;textDocument&#34;:{
+      &#34;uri&#34;:&#34;file:///Users/sgetman/code/me/workstation/test-go-prj/main.go&#34;
    },
-   &quot;position&quot;:{
-      &quot;character&quot;:5,
-      &quot;line&quot;:19
+   &#34;position&#34;:{
+      &#34;character&#34;:5,
+      &#34;line&#34;:19
    }
 }
 
-[Trace - 18:01:02.761 PM] Received response 'textDocument/hover - (9)' in 1ms.
+[Trace - 18:01:02.761 PM] Received response &#39;textDocument/hover - (9)&#39; in 1ms.
 
 {
-   &quot;contents&quot;:{
-      &quot;kind&quot;:&quot;markdown&quot;,
-      &quot;value&quot;:&quot;```go\nfunc fmt.Println(a ...interface{}) (n int, err error)\n```\n\n[`fmt.Println` on pkg.go.dev](https://pkg.go.dev/fmt?utm_source=gopls#Println)\n\nPrintln formats using the default formats for its operands and writes to standard output\\.\nSpaces are always added between operands and a newline is appended\\.\nIt returns the number of bytes written and any write error encountered\\.\n&quot;
+   &#34;contents&#34;:{
+      &#34;kind&#34;:&#34;markdown&#34;,
+      &#34;value&#34;:&#34;```go\nfunc fmt.Println(a ...interface{}) (n int, err error)\n```\n\n[`fmt.Println` on pkg.go.dev](https://pkg.go.dev/fmt?utm_source=gopls#Println)\n\nPrintln formats using the default formats for its operands and writes to standard output\\.\nSpaces are always added between operands and a newline is appended\\.\nIt returns the number of bytes written and any write error encountered\\.\n&#34;
    },
-   &quot;range&quot;:{
-      &quot;start&quot;:{
-         &quot;line&quot;:19,
-         &quot;character&quot;:5
+   &#34;range&#34;:{
+      &#34;start&#34;:{
+         &#34;line&#34;:19,
+         &#34;character&#34;:5
       },
-      &quot;end&quot;:{
-         &quot;line&quot;:19,
-         &quot;character&quot;:12
+      &#34;end&#34;:{
+         &#34;line&#34;:19,
+         &#34;character&#34;:12
       }
    }
 }
-</code></pre><p>This example illustrates how the protocol communicates with the language server at the level of document references (URIs) and document positions. These data types are programming language neutral and apply to all programming languages. The data types are not at the level of a programming language domain model which would usually provide abstract syntax trees and compiler symbols (for example, resolved types, namespaces, …). The fact, that the data types are simple and programming language neutral simplifies the protocol significantly. It is much simpler to standardize a text document URI or a cursor position compared with standardizing an abstract syntax tree and compiler symbols across different programming languages.</p>
+</code></pre></div><p>This example illustrates how the protocol communicates with the language server at the level of document references (URIs) and document positions. These data types are programming language neutral and apply to all programming languages. The data types are not at the level of a programming language domain model which would usually provide abstract syntax trees and compiler symbols (for example, resolved types, namespaces, …). The fact, that the data types are simple and programming language neutral simplifies the protocol significantly. It is much simpler to standardize a text document URI or a cursor position compared with standardizing an abstract syntax tree and compiler symbols across different programming languages.</p>
 <p>Go to next line and add code:</p>
-<pre><code>	os.Create(&quot;tmp&quot;)
-</code></pre><p>Diagnostic says us:</p>
-<pre><code>undeclared name: os
-</code></pre><p>If we invoke <code>code actions</code> , in Neovim we see
+<div class="highlight"><pre style="color:#ccc;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">	os.Create(&#34;tmp&#34;)
+</code></pre></div><p>Diagnostic says us:</p>
+<div class="highlight"><pre style="color:#ccc;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">undeclared name: os
+</code></pre></div><p>If we invoke <code>code actions</code> , in Neovim we see
 <img src="/img/code-actions-nvim.jpg" alt="code actions nvim img"></p>
 <p>in VSCode:
 <img src="/img/code-actions-vscode.png" alt="code actions vscode"></p>
 <p>and in gopls logs:</p>
-<pre><code>[Trace - 19:56:53.239 PM] Received notification 'textDocument/publishDiagnostics'.
+<div class="highlight"><pre style="color:#ccc;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">[Trace <span style="color:#39c">-</span> <span style="color:#cd00cd">19</span>:<span style="color:#cd00cd">56</span>:<span style="color:#cd00cd">53.239</span> PM] Received notification <span style="">&#39;</span>textDocument<span style="color:#39c">/</span>publishDiagnostics<span style="">&#39;</span>.
 
 {
 
-   &quot;uri&quot;:&quot;file:///Users/sgetman/code/me/workstation/test-go-prj/main.go&quot;,
-   &quot;diagnostics&quot;:[
+   <span style="color:#cd0000">&#34;uri&#34;</span>:<span style="color:#cd0000">&#34;file:///Users/sgetman/code/me/workstation/test-go-prj/main.go&#34;</span>,
+   <span style="color:#cd0000">&#34;diagnostics&#34;</span>:[
       {
-         &quot;range&quot;:{
-            &quot;start&quot;:{
-               &quot;line&quot;:20,
-               &quot;character&quot;:1
+         <span style="color:#cd0000">&#34;range&#34;</span>:{
+            <span style="color:#cd0000">&#34;start&#34;</span>:{
+               <span style="color:#cd0000">&#34;line&#34;</span>:<span style="color:#cd00cd">20</span>,
+               <span style="color:#cd0000">&#34;character&#34;</span>:<span style="color:#cd00cd">1</span>
             },
-            &quot;end&quot;:{
-               &quot;line&quot;:20,
-               &quot;character&quot;:10
+            <span style="color:#cd0000">&#34;end&#34;</span>:{
+               <span style="color:#cd0000">&#34;line&#34;</span>:<span style="color:#cd00cd">20</span>,
+               <span style="color:#cd0000">&#34;character&#34;</span>:<span style="color:#cd00cd">10</span>
             }
          },
-         &quot;severity&quot;:1,
-         &quot;source&quot;:&quot;compiler&quot;,
-         &quot;message&quot;:&quot;undeclared name: os&quot;
+         <span style="color:#cd0000">&#34;severity&#34;</span>:<span style="color:#cd00cd">1</span>,
+         <span style="color:#cd0000">&#34;source&#34;</span>:<span style="color:#cd0000">&#34;compiler&#34;</span>,
+         <span style="color:#cd0000">&#34;message&#34;</span>:<span style="color:#cd0000">&#34;undeclared name: os&#34;</span>
       }
    ]
 }
 
-[Trace - 19:57:00.001 PM] Received response 'textDocument/codeAction - (2)' in 21ms.
-               &quot;edits&quot;:[
+[Trace <span style="color:#39c">-</span> <span style="color:#cd00cd">19</span>:<span style="color:#cd00cd">57</span>:<span style="color:#cd00cd">00.001</span> PM] Received response <span style="">&#39;</span>textDocument<span style="color:#39c">/</span>codeAction <span style="color:#39c">-</span> (<span style="color:#cd00cd">2</span>)<span style="">&#39;</span> in <span style="color:#cd00cd">21</span>ms.
+               <span style="color:#cd0000">&#34;edits&#34;</span>:[
                   {
-                     &quot;range&quot;:{
-                        &quot;start&quot;:{
-                           &quot;line&quot;:4,
-                           &quot;character&quot;:0
+                     <span style="color:#cd0000">&#34;range&#34;</span>:{
+                        <span style="color:#cd0000">&#34;start&#34;</span>:{
+                           <span style="color:#cd0000">&#34;line&#34;</span>:<span style="color:#cd00cd">4</span>,
+                           <span style="color:#cd0000">&#34;character&#34;</span>:<span style="color:#cd00cd">0</span>
                         },
-                        &quot;end&quot;:{
-                           &quot;line&quot;:4,
-                           &quot;character&quot;:0
+                        <span style="color:#cd0000">&#34;end&#34;</span>:{
+                           <span style="color:#cd0000">&#34;line&#34;</span>:<span style="color:#cd00cd">4</span>,
+                           <span style="color:#cd0000">&#34;character&#34;</span>:<span style="color:#cd00cd">0</span>
                         }
                      },
-                     &quot;newText&quot;:&quot;\t\&quot;os\&quot;\n&quot;
+                     <span style="color:#cd0000">&#34;newText&#34;</span>:<span style="color:#cd0000">&#34;\t\&#34;os\&#34;\n&#34;</span>
                   }
                ]
             }
@@ -550,28 +577,28 @@ Neovim:
    },
    {
 
-      &quot;title&quot;:&quot;Organize Imports&quot;,
-      &quot;kind&quot;:&quot;source.organizeImports&quot;,
-      &quot;edit&quot;:{
-         &quot;documentChanges&quot;:[
+      <span style="color:#cd0000">&#34;title&#34;</span>:<span style="color:#cd0000">&#34;Organize Imports&#34;</span>,
+      <span style="color:#cd0000">&#34;kind&#34;</span>:<span style="color:#cd0000">&#34;source.organizeImports&#34;</span>,
+      <span style="color:#cd0000">&#34;edit&#34;</span>:{
+         <span style="color:#cd0000">&#34;documentChanges&#34;</span>:[
             {
-               &quot;textDocument&quot;:{
-                  &quot;version&quot;:0,
-                  &quot;uri&quot;:&quot;file:///Users/sgetman/code/me/workstation/test-go-prj/main.go&quot;
+               <span style="color:#cd0000">&#34;textDocument&#34;</span>:{
+                  <span style="color:#cd0000">&#34;version&#34;</span>:<span style="color:#cd00cd">0</span>,
+                  <span style="color:#cd0000">&#34;uri&#34;</span>:<span style="color:#cd0000">&#34;file:///Users/sgetman/code/me/workstation/test-go-prj/main.go&#34;</span>
                },
-               &quot;edits&quot;:[
+               <span style="color:#cd0000">&#34;edits&#34;</span>:[
                   {
-                     &quot;range&quot;:{
-                        &quot;start&quot;:{
-                           &quot;line&quot;:4,
-                           &quot;character&quot;:0
+                     <span style="color:#cd0000">&#34;range&#34;</span>:{
+                        <span style="color:#cd0000">&#34;start&#34;</span>:{
+                           <span style="color:#cd0000">&#34;line&#34;</span>:<span style="color:#cd00cd">4</span>,
+                           <span style="color:#cd0000">&#34;character&#34;</span>:<span style="color:#cd00cd">0</span>
                         },
-                        &quot;end&quot;:{
-                           &quot;line&quot;:4,
-                           &quot;character&quot;:0
+                        <span style="color:#cd0000">&#34;end&#34;</span>:{
+                           <span style="color:#cd0000">&#34;line&#34;</span>:<span style="color:#cd00cd">4</span>,
+                           <span style="color:#cd0000">&#34;character&#34;</span>:<span style="color:#cd00cd">0</span>
                         }
                      },
-                     &quot;newText&quot;:&quot;\t\&quot;os\&quot;\n&quot;
+                     <span style="color:#cd0000">&#34;newText&#34;</span>:<span style="color:#cd0000">&#34;\t\&#34;os\&#34;\n&#34;</span>
                   }
                ]
             }
@@ -580,21 +607,21 @@ Neovim:
    }
 ]
 
-[Trace - 19:57:04.274 PM] Sending notification 'textDocument/didChange'.
+[Trace <span style="color:#39c">-</span> <span style="color:#cd00cd">19</span>:<span style="color:#cd00cd">57</span>:<span style="color:#cd00cd">04.274</span> PM] Sending notification <span style="">&#39;</span>textDocument<span style="color:#39c">/</span>didChange<span style="">&#39;</span>.
 
 {
-   &quot;contentChanges&quot;:[
+   <span style="color:#cd0000">&#34;contentChanges&#34;</span>:[
       {
-         &quot;text&quot;:&quot;package main\n\nimport (\n\t\&quot;fmt\&quot;\n\t\&quot;os\&quot;\n)\n\nfunc plus(a int, b int) int {\n\treturn a + b\n}\n\nfunc plusPlus(a, b, c int) int {\n\treturn a + b + c\n}\n\nfunc main() {\n\tres := plus(1, 2)\n\tfmt.Println(\&quot;1+2 =\&quot;, res)\n\n\tres = plusPlus(1, 2, 3)\n\tfmt.Println(\&quot;0+2+3 =\&quot;, res)\n\tos.Create(\&quot;tmp\&quot;)\n}\n&quot;
+         <span style="color:#cd0000">&#34;text&#34;</span>:<span style="color:#cd0000">&#34;package main\n\nimport (\n\t\&#34;fmt\&#34;\n\t\&#34;os\&#34;\n)\n\nfunc plus(a int, b int) int {\n\treturn a + b\n}\n\nfunc plusPlus(a, b, c int) int {\n\treturn a + b + c\n}\n\nfunc main() {\n\tres := plus(1, 2)\n\tfmt.Println(\&#34;1+2 =\&#34;, res)\n\n\tres = plusPlus(1, 2, 3)\n\tfmt.Println(\&#34;0+2+3 =\&#34;, res)\n\tos.Create(\&#34;tmp\&#34;)\n}\n&#34;</span>
       }
    ],
-   &quot;textDocument&quot;:{
-      &quot;uri&quot;:&quot;file:///Users/sgetman/code/me/workstation/test-go-prj/main.go&quot;,
-      &quot;version&quot;:4
+   <span style="color:#cd0000">&#34;textDocument&#34;</span>:{
+      <span style="color:#cd0000">&#34;uri&#34;</span>:<span style="color:#cd0000">&#34;file:///Users/sgetman/code/me/workstation/test-go-prj/main.go&#34;</span>,
+      <span style="color:#cd0000">&#34;version&#34;</span>:<span style="color:#cd00cd">4</span>
    }
 }
 
-</code></pre><h2 id="does-it-work-well">Does it work well</h2>
+</code></pre></div><h2 id="does-it-work-well">Does it work well</h2>
 <p>Gopls is a default editor Go backend for the most popular editors.
 To get started with gopls, install an LSP plugin in your editor of choice.</p>
 <ul>
@@ -608,64 +635,165 @@ To get started with gopls, install an LSP plugin in your editor of choice.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>Gopls allows you get best Go developing experience in an editor of you choice.  Full support by the Go team means it is free, stable and reliable tool.</p>
 
-  </div>
+    </div>
+  </article>
+
+  
   
 
-<div class="navigation navigation-single">
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/posts">All posts</a></li>
+         
+          <li><a href="/tags">Tags</a></li>
+         
+          <li><a href="/about">About</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#intro">Intro</a></li>
+    <li><a href="#what-is-gopls">What is Gopls</a></li>
+    <li><a href="#what-problems-does-it-solve">What problems does it solve</a></li>
+    <li><a href="#how-does-it-work-and-what-features-does-it-have">How does it work and what features does it have</a>
+      <ul>
+        <li><a href="#implementation">Implementation</a></li>
+        <li><a href="#debug-gopls">Debug gopls</a></li>
+        <li><a href="#open-editor-with-go-project">Open editor with Go project</a></li>
+        <li><a href="#open-document-definition-completion-hover-and-code-actions">Open document, definition, completion, hover and code actions</a></li>
+      </ul>
+    </li>
+    <li><a href="#does-it-work-well">Does it work well</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
     
-    <a href="/posts/anagrams/" class="navigation-prev">
-      <i aria-hidden="true" class="fa fa-chevron-left"></i>
-      <span class="navigation-tittle">Anagram Problem Solving</span>
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fgetman.io%2fposts%2fgopls%2f">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
     </a>
-    
-    
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fgetman.io%2fposts%2fgopls%2f&text=Gopls">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fgetman.io%2fposts%2fgopls%2f&title=Gopls">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fgetman.io%2fposts%2fgopls%2f&is_video=false&description=Gopls">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Gopls&body=Check out this article: https%3a%2f%2fgetman.io%2fposts%2fgopls%2f">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fgetman.io%2fposts%2fgopls%2f&title=Gopls">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fgetman.io%2fposts%2fgopls%2f&title=Gopls">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fgetman.io%2fposts%2fgopls%2f&title=Gopls">
+      <i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://digg.com/submit?url=https%3a%2f%2fgetman.io%2fposts%2fgopls%2f&title=Gopls">
+      <i class="fab fa-digg fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fgetman.io%2fposts%2fgopls%2f&name=Gopls&description=Gopls">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fgetman.io%2fposts%2fgopls%2f&t=Gopls">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
 </div>
 
 
-  
-
-  
-    
-
-
-</article>
-
-
-        </div>
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2021  Sergii Getman 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">All posts</a></li>
+         
+        <li><a href="/tags">Tags</a></li>
+         
+        <li><a href="/about">About</a></li>
         
-    
-
-  
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-163649901-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
+      </ul>
+    </nav>
+  </div>
+</footer>
 
 
-<script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" integrity="sha384-ZbbbT1gw3joYkKRqh0kWyRp32UAvdqkpbLedQJSlnI8iLQcFVxaGyrOgOJiDQTTR" crossorigin="anonymous"></script>
+  </div>
+</body>
 
-
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
-        
-    <script type="text/javascript">
-        
-        hljs.initHighlightingOnLoad();
-    </script>
-    
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
 
 
 
-    
-
-
-
-    </body>
 </html>

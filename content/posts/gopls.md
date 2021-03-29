@@ -2,7 +2,14 @@
 title: "Gopls"
 date: 2021-03-13T20:24:51Z
 tags: ["go", "gopls", "lsp", "vim", "neovim", "vscode"]
-keywords: ["go", "gopls", "lsp", "vim", "neovim", "vscode"]
+# keywords: ["go", "gopls", "lsp", "vim", "neovim", "vscode"]
+keywords: 
+    - go
+    - gopls
+    - lsp
+    - vim
+    - neovim
+    - vscode
 description: "Gopls"
 images:
     - "https://media.giphy.com/media/HVbyRe2CnqzRPxUfVy/giphy.gif"
