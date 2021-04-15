@@ -6,7 +6,18 @@
     <description>Recent content on Terminal, command line, code</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 13 Mar 2021 20:24:51 +0000</lastBuildDate><atom:link href="https://getman.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Apr 2021 14:43:13 +0100</lastBuildDate><atom:link href="https://getman.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Programming Go in Neovim</title>
+      <link>https://getman.io/posts/programming-go-in-neovim/</link>
+      <pubDate>Wed, 14 Apr 2021 14:43:13 +0100</pubDate>
+      
+      <guid>https://getman.io/posts/programming-go-in-neovim/</guid>
+      <description>There are tons of articles on how to programming Go in vim, how to turn vim into IDE. The purpose of this article is to look closer at nvim as an LSP client, especially for Go.
+Intro Nvim introduced nvim-lspconfig, a collection of common configurations for Neovim’s built-in language server client . From that point nvim can be lsp client for any server that supports LSP specification.
+My primary setup before was vim with vim-go.</description>
+    </item>
+    
     <item>
       <title>Gopls</title>
       <link>https://getman.io/posts/gopls/</link>

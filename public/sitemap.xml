@@ -3,30 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://getman.io/tags/go/</loc>
-    <lastmod>2021-03-13T20:24:51+00:00</lastmod>
-  </url><url>
-    <loc>https://getman.io/posts/gopls/</loc>
-    <lastmod>2021-03-13T20:24:51+00:00</lastmod>
+    <lastmod>2021-04-14T14:43:13+01:00</lastmod>
   </url><url>
     <loc>https://getman.io/tags/gopls/</loc>
-    <lastmod>2021-03-13T20:24:51+00:00</lastmod>
+    <lastmod>2021-04-14T14:43:13+01:00</lastmod>
   </url><url>
     <loc>https://getman.io/tags/lsp/</loc>
-    <lastmod>2021-03-13T20:24:51+00:00</lastmod>
+    <lastmod>2021-04-14T14:43:13+01:00</lastmod>
   </url><url>
     <loc>https://getman.io/tags/neovim/</loc>
-    <lastmod>2021-03-13T20:24:51+00:00</lastmod>
+    <lastmod>2021-04-14T14:43:13+01:00</lastmod>
   </url><url>
     <loc>https://getman.io/posts/</loc>
-    <lastmod>2021-03-13T20:24:51+00:00</lastmod>
+    <lastmod>2021-04-14T14:43:13+01:00</lastmod>
+  </url><url>
+    <loc>https://getman.io/posts/programming-go-in-neovim/</loc>
+    <lastmod>2021-04-14T14:43:13+01:00</lastmod>
   </url><url>
     <loc>https://getman.io/tags/</loc>
-    <lastmod>2021-03-13T20:24:51+00:00</lastmod>
+    <lastmod>2021-04-14T14:43:13+01:00</lastmod>
   </url><url>
     <loc>https://getman.io/</loc>
-    <lastmod>2021-03-13T20:24:51+00:00</lastmod>
+    <lastmod>2021-04-14T14:43:13+01:00</lastmod>
   </url><url>
     <loc>https://getman.io/tags/vim/</loc>
+    <lastmod>2021-04-14T14:43:13+01:00</lastmod>
+  </url><url>
+    <loc>https://getman.io/posts/gopls/</loc>
     <lastmod>2021-03-13T20:24:51+00:00</lastmod>
   </url><url>
     <loc>https://getman.io/tags/vscode/</loc>
